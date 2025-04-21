@@ -1,6 +1,6 @@
 {
   "name": "@undercroft/lib-tools",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "A CLI toolkit for building, testing, and releasing Undercroft libraries",
   "exports": {
