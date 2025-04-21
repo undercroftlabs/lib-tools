@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "lib": ["es2017", "es6", "dom"],
+      "declaration": true,
+      "declarationMap": true,
+      "downlevelIteration": true,
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true
+    }
+  }
