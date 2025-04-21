@@ -26,10 +26,10 @@
   },
   "author": "Michael Goodwin <mikejg101@icloud.com>",
   "license": "MIT",
-  "homepage": "https://github.com/undercroftjs/lib-tools",
+  "homepage": "https://github.com/undercroftlabs/lib-tools",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/undercroftjs/lib-tools.git"
+    "url": "git+https://github.com/undercroftlabs/lib-tools.git"
   },
   "keywords": [
     "undercroft",
@@ -39,7 +39,7 @@
     "typescript"
   ],
   "bugs": {
-    "url": "https://github.com/undercroftjs/lib-tools/issues"
+    "url": "https://github.com/undercroftlabs/lib-tools/issues"
   },
   "jest-junit": {
     "outputDirectory": "./reports",
