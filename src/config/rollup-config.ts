@@ -6,6 +6,9 @@ import { codecovRollupPlugin } from '@codecov/rollup-plugin';
 export interface RollupConfigOptions {
   name: string;
   bundle: string;
+  globals?: Record<string, string>;
+  plugins?: any[];
+  external?: string[];
 }
 
 export function withUndercroftRollupConfig(config: RollupConfigOptions) {
@@ -16,9 +19,15 @@ export function withUndercroftRollupConfig(config: RollupConfigOptions) {
       format: 'umd',
       name: config.name,
       sourcemap: true,
+      globals: {
+        ...(config?.globals || {}),
+      },
     },
     plugins: [
-      resolve(),
+      ...(config?.plugins || []),
+      resolve({
+        preferBuiltins: false,  
+      }),
       commonjs(),
       terser(),
       codecovRollupPlugin({
@@ -27,5 +36,6 @@ export function withUndercroftRollupConfig(config: RollupConfigOptions) {
         uploadToken: process.env.CODECOV_TOKEN,
       }),
     ],
+    external: config?.external || [],
   };
 }
